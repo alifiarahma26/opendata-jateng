@@ -7,11 +7,16 @@ export default function InfographicSection() {
   const getCategoryColor = (topic: string) => {
     const colors: { [key: string]: string } = {
       'Inflasi': 'bg-red-500',
-      'Ekspor': 'bg-green-600',
-      'Impor': 'bg-blue-600',
-      'Nilai Tukar Petani': 'bg-yellow-500',
-      'Pariwisata': 'bg-pink-500',
-      'Transportasi': 'bg-indigo-600'
+            'Ekspor': 'bg-green-600',
+            'Impor': 'bg-blue-600',
+            'Nilai Tukar Petani': 'bg-yellow-500',
+            'Pariwisata': 'bg-pink-500',
+            'Transportasi': 'bg-indigo-600',
+            'Kemiskinan': 'bg-orange-500',
+            'Gini Ratio': 'bg-purple-600',
+            'Index Pembangunan Manusia': 'bg-teal-600',
+      'Tingkat Pengangguran Terbuka': 'bg-rose-500',
+      'Pertumbuhan Ekonomi': 'bg-emerald-600'
     };
     return colors[topic] || 'bg-gray-400';
   };
@@ -28,7 +33,8 @@ export default function InfographicSection() {
 
         {/* Kartu Infografis */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {infographics.map((infographic) => (
+            {infographics.slice(0, 9).map((infographic) => (
+
             <Link
              key={infographic.id}
                            href={`/infographics/${infographic.slug}`}
