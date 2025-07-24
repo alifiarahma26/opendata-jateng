@@ -1,0 +1,22 @@
+node_modules/ 
+# dependencies
+/node_modules
+
+# build output
+/.next
+/out
+/dist
+
+# production
+/build
+
+# misc
+.env
+.env.*.local
+package-lock.json
+*.log
+*.tsbuildinfo
+.vscode
+.idea
+.DS_Store
+Thumbs.db
